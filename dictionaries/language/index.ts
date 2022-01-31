@@ -1,4 +1,4 @@
-import { Language } from '@/utils/path/path-type';
+import { Language } from 'types/api/open-api';
 
 // 완전 제공 언어
 export const KOREAN: Language = "Korean";

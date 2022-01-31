@@ -7,7 +7,7 @@ import {
   GameId,
   MetaType,
   Language,
-} from './path-type';
+} from 'types/api/open-api';
 import {
   HASH,
   GET_USER_NUMBER_PATH,
@@ -18,8 +18,8 @@ import {
   MATCH_RESULTS_PATH,
   GET_GAME_DATA_TABLE_PATH,
   GET_LANGUAGE_DATA_PATH,
-} from '@/dictionaries/default-path';
-import { KOREAN } from '@/dictionaries/language';
+} from 'dictionaries/default-path';
+import { KOREAN } from 'dictionaries/language';
 
 export const getUserNumberPath = (nickname: Nickname): Path => `${GET_USER_NUMBER_PATH}?query=${nickname}`;
 export const topRankersPath = (seasonId: SeasonId = 0, matchingTeamMode: MatcingTeamMode = 1): Path => `${TOP_RANKERS_PATH}/${seasonId}/${matchingTeamMode}`;

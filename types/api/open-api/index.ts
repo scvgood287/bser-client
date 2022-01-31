@@ -1,13 +1,35 @@
-import {
-  Path,
-  Nickname,
-  SeasonId,
-  MatcingTeamMode,
-  UserNum,
-  GameId,
-} from 'utils/path/path-type';
 
-// Primitive Types
+/* Primitive Types */
+
+// Path
+export type Path = string;
+export type Nickname = string;
+export type SeasonId = 0 | 1 | 2 | 3 | 4;
+export type MatcingTeamMode = 1 | 2 | 3;
+export type UserNum = number;
+export type GameId = number;
+export type MetaType = "hash" | "";
+export type Language =
+  // 완전 제공 언어
+  "Korean" |
+  "English" |
+  "Japanese" |
+  "ChineseSimplified" |
+  "ChineseTraditional" |
+
+  // 부분 제공 언어
+  "French" |
+  "Spanish" |
+  "SpanishLatin" |
+  "Portuguese" |
+  "PortugueseLatin" |
+  "Indonesian" |
+  "German" |
+  "Russian" |
+  "Thai" |
+  "Vietnamese";
+
+// api
 export type Code = number;
 export type Message = string;
 export type Rank = number;
@@ -34,7 +56,8 @@ export type Top3Rate = number;
 export type MatchingMode = 2 | 3;
 export type L10Path = Path;
 
-// Reference Types
+/* Reference Types */
+
 export interface User {
   userNum: UserNum,
   nickname: Nickname,
@@ -91,7 +114,8 @@ export type UserRanks = UserRank[];
 export type UserStats = UserStat[];
 export type UserGames = BattleUserResult[];
 
-// Response Types
+/* Response Types */
+
 export interface DefaultResponse {
   code: Code,
   message: Message,

@@ -1,4 +1,4 @@
-import { Path, MetaType } from '@/utils/path/path-type';
+import { Path, MetaType } from 'types/api/open-api';
 
 export const HASH: MetaType = "hash";
 
